@@ -1,0 +1,26 @@
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\icudt.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\x64\pdfium.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\x86\pdfium.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\libpdfium.dylib
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\PDF Viewer.exe
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\PDF Viewer.deps.json
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\PDF Viewer.runtimeconfig.json
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\PDF Viewer.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\PDF Viewer.pdb
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\Patagames.Pdf.Gdi.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\Patagames.Pdf.WinForms.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\Patagames.Pdf.Wpf.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Debug\net8.0-windows\Patagames.Pdf.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.csproj.AssemblyReference.cache
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF_Viewer.PDFViewer.resources
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.csproj.GenerateResource.cache
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.AssemblyInfoInputs.cache
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.AssemblyInfo.cs
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.csproj.CoreCompileInputs.cache
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.csproj.Up2Date
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\refint\PDF Viewer.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.pdb
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.genruntimeconfig.cache
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\ref\PDF Viewer.dll

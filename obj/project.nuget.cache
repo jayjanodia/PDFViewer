@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qXlsFKZEtsQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jay.janodia\\source\\repos\\PDF Viewer\\PDF Viewer\\PDF Viewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jay.janodia\\.nuget\\packages\\pdfium.net.sdk\\4.94.2704\\pdfium.net.sdk.4.94.2704.nupkg.sha512"
+  ],
+  "logs": []
+}
