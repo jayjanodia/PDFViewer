@@ -17,7 +17,7 @@ namespace PDF_Viewer
         private int previousCharIndex = -1;
         private int previousCharsCount = 0;
         private string currentWord = "";
-        private bool isDarkMode = false;
+        private bool isDarkMode = true;
 
         List<Control> shadowControls = new List<Control>();
         Bitmap? shadowBmp = null;
@@ -30,7 +30,8 @@ namespace PDF_Viewer
             pdfViewer1.ContextMenuStrip = contextMenuStrip1;
             pdfViewer1.MouseWheel += PDFViewer_MouseWheel;
             toolTip1.SetToolTip(this.btnOpenFindTbl, "Find works by pressing Ctrl + F as well!");
-            ApplyLightTheme();
+            ApplyDarkTheme();
+            btnDarkMode.Text = pdfViewer1.BackColor == Color.DarkGray ? "Light Mode" : "Dark Mode";
             this.Refresh();
         }
 
@@ -160,6 +161,7 @@ namespace PDF_Viewer
             {
                 tblFindText.Visible = true;
                 txtFind.Focus();
+                txtFind.SelectAll();
             }
         }
 
@@ -346,6 +348,7 @@ namespace PDF_Viewer
         {
             tblFindText.Visible = true;
             txtFind.Focus();
+            txtFind.SelectAll();
         }
 
         public void PDFViewer_Paint(object sender, PaintEventArgs e)
