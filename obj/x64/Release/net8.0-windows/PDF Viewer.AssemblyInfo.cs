@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDF Viewer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+453367d2c7061daa727b8417880304ad53fde81e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fad588af16e62b0f1c3afcd547739c042e2b0507")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDF Viewer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDF Viewer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

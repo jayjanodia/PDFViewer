@@ -4,6 +4,7 @@ using Patagames.Pdf.Net.Controls.WinForms;
 using System;
 using System.Drawing.Drawing2D;
 using System.Drawing.Printing;
+using System.Threading;
 using static Patagames.Pdf.Net.PdfSearch;
 
 namespace PDF_Viewer
@@ -18,6 +19,7 @@ namespace PDF_Viewer
         private int previousCharsCount = 0;
         private string currentWord = "";
         private bool isDarkMode = true;
+        private CancellationTokenSource cancellationTokenSource;
 
         List<Control> shadowControls = new List<Control>();
         Bitmap? shadowBmp = null;
@@ -191,12 +193,15 @@ namespace PDF_Viewer
             {
                 bool reset = btnFind.Text == "Find";
                 currentPageIndex = pdfViewer1.CurrentIndex;
-                await FindText(txtSearch, reset);
+                cancellationTokenSource = new CancellationTokenSource();
+                await FindText(txtSearch, reset, true, cancellationTokenSource.Token);
+                if (cancellationTokenSource.Token.IsCancellationRequested) return;
                 btnFind.Text = "Find Next";
+                btnFindPrev.Visible = true;
             }
         }
 
-        private async Task FindText(string txtSearch, bool reset)
+        private async Task FindText(string txtSearch, bool reset, bool forward, CancellationToken cancellationToken)
         {
             bool found = false;
             FindFlags findFlags = chkMatchCase.Checked ? FindFlags.MatchCase : FindFlags.None;
@@ -206,9 +211,20 @@ namespace PDF_Viewer
             prgSearch.Maximum = pdfViewer1.Document.Pages.Count;
             prgSearch.Value = currentPageIndex;
 
+            int startPage = forward ? (reset ? 0 : currentPageIndex) : currentPageIndex;
+            int endPage = forward ? pdfViewer1.Document.Pages.Count : -1;
+            int step = forward ? 1 : -1;
+
             // Highlight the current occurence in orange
-            for (int i = reset ? 0 : currentPageIndex; i < pdfViewer1.Document.Pages.Count; i++)
+            for (int i = startPage; i != endPage; i += step)
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    tblProgressBar.Visible = false;
+                    MessageBox.Show("Search Cancelled.");
+                    return;
+                }
+
                 var page = pdfViewer1.Document.Pages[i];
                 PdfFind foundText;
                 if (i == currentPageIndex)
@@ -303,10 +319,14 @@ namespace PDF_Viewer
             txtFind.BackColor = purple;
             btnFind.ForeColor = Color.Lavender;
             btnFind.BackColor = purple;
+            btnFindPrev.ForeColor = Color.Lavender;
+            btnFindPrev.BackColor = purple;
             btnOpenFindTbl.ForeColor = Color.Lavender;
             btnOpenFindTbl.BackColor = purple;
             btnCloseFind.ForeColor = Color.Lavender;
             btnCloseFind.BackColor = purple;
+            btnCancelSearch.ForeColor = Color.Lavender;
+            btnCancelSearch.BackColor = purple;
             chkMatchCase.ForeColor = Color.Lavender;
             btnOpenPDF.ForeColor = Color.Lavender;
             btnOpenPDF.BackColor = purple;
@@ -379,6 +399,40 @@ namespace PDF_Viewer
         private void btnFitToScreen_Click(object sender, EventArgs e)
         {
             pdfViewer1.SizeMode = SizeModes.FitToWidth;
+        }
+
+        private async void btnFindPrev_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFind.Text))
+            {
+                MessageBox.Show("Kindly enter a value to search for!", "No text entered in search bar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (pdfViewer1.Document == null)
+            {
+                MessageBox.Show("Please open up a PDF file to search for a word in it.", "No file opened!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string txtSearch = txtFind.Text;
+            if (currentWord != txtSearch)
+            {
+                currentWord = txtSearch;
+                pdfViewer1.RemoveHighlightFromText();
+                pdfViewer1.Invalidate();
+            }
+            if (!string.IsNullOrEmpty(txtSearch))
+            {
+                bool reset = btnFind.Text == "Find";
+                currentPageIndex = pdfViewer1.CurrentIndex;
+                cancellationTokenSource = new CancellationTokenSource();
+                await FindText(txtSearch, reset, false, cancellationTokenSource.Token);
+            }
+        }
+
+        private void btnCancelSearch_Click(object sender, EventArgs e)
+        {
+            cancellationTokenSource?.Cancel();
         }
     }
 }

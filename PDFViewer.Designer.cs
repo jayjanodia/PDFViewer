@@ -39,11 +39,13 @@
             btnOpenFindTbl = new Button();
             btnFitToScreen = new Button();
             tblFindText = new TableLayoutPanel();
+            btnFindPrev = new Button();
             chkMatchCase = new CheckBox();
             btnFind = new Button();
             txtFind = new TextBox();
             btnCloseFind = new Button();
             tblProgressBar = new TableLayoutPanel();
+            btnCancelSearch = new Button();
             lblPleaseWait = new Label();
             prgSearch = new ProgressBar();
             contextMenuStrip1 = new ContextMenuStrip(components);
@@ -88,7 +90,7 @@
             // 
             tableLayoutPanel1.SetColumnSpan(splitContainer1, 2);
             splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(3, 106);
+            splitContainer1.Location = new Point(3, 114);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -98,7 +100,7 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pdfViewer1);
-            splitContainer1.Size = new Size(794, 556);
+            splitContainer1.Size = new Size(794, 548);
             splitContainer1.SplitterDistance = 264;
             splitContainer1.TabIndex = 1;
             // 
@@ -109,7 +111,7 @@
             bookmarksViewer1.Location = new Point(0, 0);
             bookmarksViewer1.Name = "bookmarksViewer1";
             bookmarksViewer1.PdfViewer = pdfViewer1;
-            bookmarksViewer1.Size = new Size(264, 556);
+            bookmarksViewer1.Size = new Size(264, 548);
             bookmarksViewer1.TabIndex = 0;
             // 
             // pdfViewer1
@@ -138,7 +140,7 @@
             pdfViewer1.ShowCurrentPageHighlight = true;
             pdfViewer1.ShowLoadingIcon = true;
             pdfViewer1.ShowPageSeparator = true;
-            pdfViewer1.Size = new Size(526, 556);
+            pdfViewer1.Size = new Size(526, 548);
             pdfViewer1.SizeMode = Patagames.Pdf.Net.Controls.WinForms.SizeModes.Zoom;
             pdfViewer1.TabIndex = 0;
             pdfViewer1.TextSelectColor = Color.FromArgb(70, 70, 130, 180);
@@ -240,6 +242,7 @@
             tblFindText.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tblFindText.ColumnStyles.Add(new ColumnStyle());
             tblFindText.ColumnStyles.Add(new ColumnStyle());
+            tblFindText.Controls.Add(btnFindPrev, 1, 1);
             tblFindText.Controls.Add(chkMatchCase, 0, 1);
             tblFindText.Controls.Add(btnFind, 1, 0);
             tblFindText.Controls.Add(txtFind, 0, 0);
@@ -250,9 +253,24 @@
             tblFindText.RowCount = 2;
             tblFindText.RowStyles.Add(new RowStyle());
             tblFindText.RowStyles.Add(new RowStyle());
-            tblFindText.Size = new Size(278, 58);
+            tblFindText.Size = new Size(278, 66);
             tblFindText.TabIndex = 6;
             tblFindText.Visible = false;
+            // 
+            // btnFindPrev
+            // 
+            btnFindPrev.AutoSize = true;
+            btnFindPrev.BackColor = Color.Lavender;
+            tblFindText.SetColumnSpan(btnFindPrev, 2);
+            btnFindPrev.FlatStyle = FlatStyle.Flat;
+            btnFindPrev.Location = new Point(159, 36);
+            btnFindPrev.Name = "btnFindPrev";
+            btnFindPrev.Size = new Size(90, 27);
+            btnFindPrev.TabIndex = 6;
+            btnFindPrev.Text = "Find Previous";
+            btnFindPrev.UseVisualStyleBackColor = false;
+            btnFindPrev.Visible = false;
+            btnFindPrev.Click += btnFindPrev_Click;
             // 
             // chkMatchCase
             // 
@@ -306,8 +324,10 @@
             // tblProgressBar
             // 
             tblProgressBar.AutoSize = true;
-            tblProgressBar.ColumnCount = 1;
+            tblProgressBar.ColumnCount = 2;
             tblProgressBar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblProgressBar.ColumnStyles.Add(new ColumnStyle());
+            tblProgressBar.Controls.Add(btnCancelSearch, 1, 0);
             tblProgressBar.Controls.Add(lblPleaseWait, 0, 0);
             tblProgressBar.Controls.Add(prgSearch, 0, 1);
             tblProgressBar.Location = new Point(3, 42);
@@ -315,9 +335,23 @@
             tblProgressBar.RowCount = 2;
             tblProgressBar.RowStyles.Add(new RowStyle());
             tblProgressBar.RowStyles.Add(new RowStyle());
-            tblProgressBar.Size = new Size(222, 44);
+            tblProgressBar.Size = new Size(318, 44);
             tblProgressBar.TabIndex = 7;
             tblProgressBar.Visible = false;
+            // 
+            // btnCancelSearch
+            // 
+            btnCancelSearch.AutoSize = true;
+            btnCancelSearch.BackColor = Color.Lavender;
+            btnCancelSearch.FlatStyle = FlatStyle.Flat;
+            btnCancelSearch.Location = new Point(225, 3);
+            btnCancelSearch.Name = "btnCancelSearch";
+            tblProgressBar.SetRowSpan(btnCancelSearch, 2);
+            btnCancelSearch.Size = new Size(90, 27);
+            btnCancelSearch.TabIndex = 7;
+            btnCancelSearch.Text = "Cancel";
+            btnCancelSearch.UseVisualStyleBackColor = false;
+            btnCancelSearch.Click += btnCancelSearch_Click;
             // 
             // lblPleaseWait
             // 
@@ -420,5 +454,7 @@
         private Button btnOpenFindTbl;
         private ToolTip toolTip1;
         private Button btnFitToScreen;
+        private Button btnFindPrev;
+        private Button btnCancelSearch;
     }
 }
