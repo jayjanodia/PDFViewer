@@ -1,0 +1,13 @@
+C:\Users\jay.janodia\Downloads\PDF Viewer.exe
+C:\Users\jay.janodia\Downloads\icudt.dll
+C:\Users\jay.janodia\Downloads\x64\pdfium.dll
+C:\Users\jay.janodia\Downloads\x86\pdfium.dll
+C:\Users\jay.janodia\Downloads\libpdfium.dylib
+C:\Users\jay.janodia\Downloads\PDF Viewer.dll
+C:\Users\jay.janodia\Downloads\PDF Viewer.deps.json
+C:\Users\jay.janodia\Downloads\PDF Viewer.runtimeconfig.json
+C:\Users\jay.janodia\Downloads\PDF Viewer.pdb
+C:\Users\jay.janodia\Downloads\Patagames.Pdf.Gdi.dll
+C:\Users\jay.janodia\Downloads\Patagames.Pdf.WinForms.dll
+C:\Users\jay.janodia\Downloads\Patagames.Pdf.Wpf.dll
+C:\Users\jay.janodia\Downloads\Patagames.Pdf.dll

@@ -1,0 +1,13 @@
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\PDF Viewer.exe
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\icudt.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\x64\pdfium.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\x86\pdfium.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\libpdfium.dylib
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\PDF Viewer.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\PDF Viewer.deps.json
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\PDF Viewer.runtimeconfig.json
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\PDF Viewer.pdb
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\Patagames.Pdf.Gdi.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\Patagames.Pdf.WinForms.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\Patagames.Pdf.Wpf.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\bin\Release\net8.0-windows\app.publish\Patagames.Pdf.dll

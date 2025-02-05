@@ -24,3 +24,5 @@ C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows
 C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.pdb
 C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.genruntimeconfig.cache
 C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\ref\PDF Viewer.dll
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF Viewer.sourcelink.json
+C:\Users\jay.janodia\source\repos\PDF Viewer\PDF Viewer\obj\Debug\net8.0-windows\PDF_Viewer.Properties.Resources.resources
